@@ -1,0 +1,147 @@
+@import "~assets/styles/mixin.g.scss";
+
+.side_bar {
+  width: 60px;
+  height: 100%;
+  @include drag;
+  display: inline-block;
+  position: relative;
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 120px;
+    height: 100px;
+    background-image: url("~assets/images/box.png");
+    background-size: 100% 100%;
+    background-position: center center;
+    left: 0;
+    bottom: 10px;
+  }
+
+  .menu {
+    height: 200px;
+    width: 100%;
+    margin-top: 18px;
+
+    button {
+      height: 32px;
+      transition: .3s background;
+      border-top-right-radius: 17px;
+      border-bottom-right-radius: 17px;
+      width: 100%;
+      text-align: center;
+      margin: 10px 0;
+      font-size: 12px;
+
+
+      &.active {
+        background: #EDF9E8;
+      }
+
+      &:nth-child(1) {
+
+      }
+
+      &:nth-child(2) {
+        &.active {
+          background: #FCE5B3;
+
+        }
+      }
+
+      &:nth-child(3) {
+        &.active {
+          background: #FEF9F0;
+        }
+      }
+
+      &:nth-child(4) {
+        &.active {
+          background: #F9DDD7;
+
+        }
+      }
+
+    }
+
+  }
+}
+
+.icon_button {
+  width: 100px;
+  height: 32px;
+  font-size: 18px;
+
+  .text {
+    font-size: 12px;
+    margin: 2px;
+  }
+
+  span[class^="icon-"], span[class*=" icon-"] {
+    vertical-align: bottom;
+  }
+
+  .top, .bottom {
+    display: block;
+
+  }
+
+}
+
+.toolbox {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .search_wrapper {
+    width: 200px;
+    height: 30px;
+    margin-left: 30px;
+    position: relative;
+
+    .icon_wrapper {
+      font-size: 12px;
+      position: absolute;
+      left: 35px;
+      top: 50%;
+      transform: translateY(-40%);
+      color: gray;
+    }
+
+    input {
+      box-sizing: border-box;
+      width: 100%;
+      height: 100%;
+      padding-left: 50px;
+      border-radius: 10px;
+      border: 1px solid rgba(0, 0, 0, .05);
+    }
+
+  }
+
+  .tooltip {
+    width: 200px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 12px;
+
+    .user_avatar {
+      font-size: 30px;
+    }
+  }
+}
+
+
+.model_modal {
+  width: 300px;
+  height: 230px;
+  padding: 10px;
+  .btn_group {
+
+  }
+}
+
